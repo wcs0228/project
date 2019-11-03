@@ -84,28 +84,28 @@ public class test extends JFrame implements ActionListener {
 
 
 
-        img1 =new ImageIcon("C:\\Users\\wen04\\project\\src\\photo\\S__5677068.jpg");
+        img1 =new ImageIcon("D:\\project\\src\\photo\\S__5677068.jpg");
         img1.setImage(img1.getImage().getScaledInstance(300,300,Image.SCALE_DEFAULT));
         show.setIcon(img1);
         show.setBounds(100,100,300,300);
         Jfrm.add(show);
         show.setVisible(false);
 
-        img2 =new ImageIcon("C:\\Users\\wen04\\project\\src\\photo\\S__5677070.jpg");
+        img2 =new ImageIcon("D:\\project\\src\\photo\\S__5677070.jpg");
         img2.setImage(img2.getImage().getScaledInstance(300,300,Image.SCALE_DEFAULT));
         show2.setIcon(img2);
         show2.setBounds(600,100,300,300);
         Jfrm.add(show2);
         show2.setVisible(false);
 
-        img3 =new ImageIcon("C:\\Users\\wen04\\project\\src\\photo\\S__5677065.jpg");
+        img3 =new ImageIcon("D:\\project\\src\\photo\\S__5677065.jpg");
         img3.setImage(img3.getImage().getScaledInstance(300,300,Image.SCALE_DEFAULT));
         show3.setIcon(img3);
         show3.setBounds(100,100,300,300);
         Jfrm.add(show3);
         show3.setVisible(false);
 
-        img4 =new ImageIcon("C:\\Users\\wen04\\project\\src\\photo\\S__5677067.jpg");
+        img4 =new ImageIcon("D:\\project\\src\\photo\\S__5677067.jpg");
         img4.setImage(img4.getImage().getScaledInstance(300,300,Image.SCALE_DEFAULT));
         show4.setIcon(img4);
         show4.setBounds(600,100,300,300);
