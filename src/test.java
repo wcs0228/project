@@ -34,22 +34,21 @@ public class test extends JFrame implements ActionListener,ItemListener {
 
     static JButton btnthr = new JButton("闖關模式");
     static JButton btncho = new JButton("選擇關卡");
-    static JButton btn = new JButton("Draw");
-    static JButton btn2 = new JButton("Draw");
+
 
     static JCheckBox ckb = new JCheckBox("左邊這個");
     static JCheckBox ckb2 = new JCheckBox("右邊這個");
 
     static JDialog dlg=new JDialog(Jfrm);
+    static JDialog dlg2=new JDialog(Jfrm);
+
     static JButton btnnext=new JButton("進入下一關");
     static JButton btncancel=new JButton("cancel");
-
-    static Choice chc=new Choice();
-    static JDialog dlg2=new JDialog(Jfrm);
     static JButton btnnext2=new JButton("進入下一關");
     static JButton btncancel2=new JButton("cancel");
-
     static JButton btnx = new JButton("");
+
+    static Choice chc=new Choice();
 
     static List lst=new List();
 
@@ -60,6 +59,7 @@ public class test extends JFrame implements ActionListener,ItemListener {
         Jfrm.setLayout(null);
         Jfrm.setSize(1000, 800);
         Jfrm.setVisible(true);
+
 
         text.setBounds(320,70,500,50);
         text.setFont(new Font("start", Font.BOLD|Font.ITALIC , 50));
@@ -90,6 +90,12 @@ public class test extends JFrame implements ActionListener,ItemListener {
         Jfrm.add(text6);
         text6.setVisible(false);
 
+        yes.setBounds(450,150,100,50);
+        yes.setFont(new Font("start", Font.BOLD|Font.ITALIC , 30));
+        yes.setForeground(Color.red);
+        Jfrm.add(yes);
+        yes.setVisible(false);
+
         no.setBounds(450,150,100,50);
         no.setFont(new Font("start", Font.BOLD|Font.ITALIC , 30));
         no.setForeground(Color.red);
@@ -108,12 +114,6 @@ public class test extends JFrame implements ActionListener,ItemListener {
         Jfrm.add(no3);
         no3.setVisible(false);
 
-        yes.setBounds(450,150,100,50);
-        yes.setFont(new Font("start", Font.BOLD|Font.ITALIC , 30));
-        yes.setForeground(Color.red);
-        Jfrm.add(yes);
-        yes.setVisible(false);
-
 
         ckb.setBounds(200,450,100,100);
         Jfrm.add(ckb);
@@ -121,6 +121,7 @@ public class test extends JFrame implements ActionListener,ItemListener {
         ckb2.setBounds(700,450,100,100);
         Jfrm.add(ckb2);
         ckb2.setVisible(false);
+
 
         ButtonGroup bg = new ButtonGroup();
         bg.add(ckb);
@@ -131,19 +132,8 @@ public class test extends JFrame implements ActionListener,ItemListener {
         Jfrm.add(btnthr);
         btncho.setBounds(550,400,100,100);
         Jfrm.add(btncho);
-        btn.setBounds(100,450,100,100);
-        Jfrm.add(btn);
-        btn.setVisible(false);
-        btn2.setBounds(300,450,100,100);
-        Jfrm.add(btn2);
-        btn2.setVisible(false);
 
-        btnthr.addActionListener(Jfrm);
-        btncho.addActionListener(Jfrm);
-        btn.addActionListener(Jfrm);
-        btn2.addActionListener(Jfrm);
-        ckb.addActionListener(Jfrm);
-        ckb2.addActionListener(Jfrm);
+
 
 
         dlg.setTitle("答對選擇");
@@ -155,9 +145,9 @@ public class test extends JFrame implements ActionListener,ItemListener {
         dlg.add(btnnext);
         dlg.add(btncancel);
 
-        btnnext.addActionListener(Jfrm);
-        btncancel.addActionListener(Jfrm);
 
+
+        chc.add("");
         chc.add("1");
         chc.add("2");
         chc.add("3");
@@ -198,7 +188,7 @@ public class test extends JFrame implements ActionListener,ItemListener {
         lst.setBounds(0,200,100,100);
         Jfrm.add(lst);
         lst.setVisible(false);
-        lst.addItemListener(Jfrm);
+
 
         ImageIcon icon = new ImageIcon("D:\\project\\src\\photo\\transparent");
         btnx.setBounds(618,380,40,35);
@@ -210,6 +200,13 @@ public class test extends JFrame implements ActionListener,ItemListener {
         btnx.setContentAreaFilled(false);
         Jfrm.add(btnx);
 
+        btnthr.addActionListener(Jfrm);
+        btncho.addActionListener(Jfrm);
+        ckb.addActionListener(Jfrm);
+        ckb2.addActionListener(Jfrm);
+        btnnext.addActionListener(Jfrm);
+        btncancel.addActionListener(Jfrm);
+        lst.addItemListener(Jfrm);
         btnx.addActionListener(Jfrm);
 
         img1 =new ImageIcon("D:\\project\\src\\photo\\S__5677068.jpg");
@@ -329,10 +326,12 @@ public class test extends JFrame implements ActionListener,ItemListener {
             show6.setVisible(true);
             text5.setVisible(true);
             btnx.setVisible(true);
+            chc.select("");
         }
         else if(actionEvent.getSource() ==btncancel2)
         {
             dlg2.setVisible(false);
+            chc.select("");
         }
         else if(actionEvent.getSource() ==btnx)
         {
@@ -360,9 +359,12 @@ public class test extends JFrame implements ActionListener,ItemListener {
         {
             dlg2.setVisible(true);
             no3.setVisible(false);
-
         }
-
+        else if(number =="1"||number =="2"||number =="3"||number =="4"||number =="5"||number =="6"||number =="7"||number =="8"||number =="9"||number =="10"||number =="11"||number =="12"||number =="13"||number =="14")
+        {
+            no3.setVisible(true);
+            chc.select("");
+        }
         else if(round =="one")
         {
 
@@ -370,6 +372,7 @@ public class test extends JFrame implements ActionListener,ItemListener {
             yes.setVisible(false);
             no.setVisible(false);
             no2.setVisible(false);
+            no3.setVisible(false);
             show.setVisible(false);
             text2.setVisible(false);
             text3.setVisible(false);
@@ -385,6 +388,7 @@ public class test extends JFrame implements ActionListener,ItemListener {
             show3.setVisible(false);
             show4.setVisible(false);
             show5.setVisible(false);
+            show6.setVisible(false);
             ckb.setVisible(false);
             ckb2.setVisible(false);
             chc.setVisible(false);
@@ -401,6 +405,7 @@ public class test extends JFrame implements ActionListener,ItemListener {
             yes.setVisible(false);
             no.setVisible(false);
             no2.setVisible(false);
+            no3.setVisible(false);
             show.setVisible(false);
             show2.setVisible(false);
             show3.setVisible(false);
@@ -418,17 +423,27 @@ public class test extends JFrame implements ActionListener,ItemListener {
         else if(round =="three")
         {
             dlg2.setVisible(false);
+            text.setVisible(false);
+            text2.setVisible(false);
+            text3.setVisible(false);
             text4.setVisible(false);
+            show.setVisible(false);
+            show2.setVisible(false);
+            show3.setVisible(false);
+            show4.setVisible(false);
             show5.setVisible(false);
+            ckb.setVisible(false);
+            ckb2.setVisible(false);
             chc.setVisible(false);
+            yes.setVisible(false);
+            no.setVisible(false);
+            no2.setVisible(false);
+            no3.setVisible(false);
             show6.setVisible(true);
             text5.setVisible(true);
             btnx.setVisible(true);
         }
-        else
-        {
-            no3.setVisible(true);
-        }
+
 
 
 
