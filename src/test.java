@@ -360,12 +360,34 @@ public class test extends JFrame implements ActionListener,ItemListener {
         {
             dlg2.setVisible(true);
             no3.setVisible(false);
+
         }
+
         else if(round =="one")
         {
+
+            dlg.setVisible(false);
+            yes.setVisible(false);
+            no.setVisible(false);
+            no2.setVisible(false);
+            show.setVisible(false);
+            text2.setVisible(false);
+            text3.setVisible(false);
+            text4.setVisible(false);
+            text5.setVisible(false);
             text.setVisible(false);
             btnthr.setVisible(false);
             btncho.setVisible(false);
+            dlg.setVisible(false);
+            yes.setVisible(false);
+            show.setVisible(false);
+            show2.setVisible(false);
+            show3.setVisible(false);
+            show4.setVisible(false);
+            show5.setVisible(false);
+            ckb.setVisible(false);
+            ckb2.setVisible(false);
+            chc.setVisible(false);
             text2.setVisible(true);
             text3.setVisible(true);
             show.setVisible(true);
@@ -379,17 +401,19 @@ public class test extends JFrame implements ActionListener,ItemListener {
             yes.setVisible(false);
             no.setVisible(false);
             no2.setVisible(false);
+            show.setVisible(false);
             show2.setVisible(false);
             show3.setVisible(false);
             show4.setVisible(false);
-            show.setVisible(false);
             text2.setVisible(false);
             text3.setVisible(false);
+            text5.setVisible(false);
             ckb.setVisible(false);
             ckb2.setVisible(false);
             show5.setVisible(true);
             chc.setVisible(true);
             text4.setVisible(true);
+
         }
         else if(round =="three")
         {
