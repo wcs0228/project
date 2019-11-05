@@ -52,11 +52,12 @@ public class test extends JFrame implements ActionListener,ItemListener {
     static JButton btnnext2=new JButton("進入下一關");
     static JButton btncancel2=new JButton("cancel");
 
-    //隱形按鈕，負責第三關熊貓
-    static JButton btnx = new JButton("");
 
     //第二關下拉式選單，選1到16的圖片號碼
     static Choice chc=new Choice();
+
+    //隱形按鈕，負責第三關熊貓
+    static JButton btnx = new JButton("");
 
     //選關模式用的 一二三關
     static List lst=new List();
@@ -65,7 +66,7 @@ public class test extends JFrame implements ActionListener,ItemListener {
     public static void main(String[] args) {
 
         //視窗的基本設定
-        Jfrm.setTitle("找找看");
+        Jfrm.setTitle("你知道答案嗎?");
         Jfrm.setLayout(null);   //排版都用xy軸
         Jfrm.setSize(1000, 800);
         Jfrm.setVisible(true);
